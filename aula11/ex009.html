@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CU</title>
+    <style>
+        body{
+            font: 1.4rem Arial;
+        }
+
+        input  {
+            width: 100px;
+            font: 1.4rem Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Qual páis você vive: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="descobrir()">
+    <div class="res"></div>
+
+    <script>
+        function descobrir() {
+            var nacio = window.document.getElementById('pais')
+            var res = window.document.querySelector('.res')
+            var pais = nacio.value
+
+            res.innerHTML += `<p>Seu país de origem é <strong>${pais}</strong></p>`
+            if(pais ==  'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é gringo safado</p>'
+            }
+        }
+    </script>
+</body>
+</html>
