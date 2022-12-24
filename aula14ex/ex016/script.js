@@ -5,7 +5,7 @@ function contar() {
     var res = document.getElementById('res')
 
     if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        RegExp.innerHTML = 'Impossível contar!'
+        res.innerHTML = 'Impossível contar!'
     } else {
         res.innerHTML = 'Contando: <br>'
         let i = Number(ini.value)
