@@ -1,5 +1,5 @@
 let containerItens = document.querySelector('#container-itens');
-let itens = document.querySelectorAll('.item')
+let itens = document.querySelectorAll('.item');
 
 const anterior = () => {
     containerItens.appendChild(itens[0]);
@@ -8,7 +8,7 @@ const anterior = () => {
 
 const proximo = () => {
     const lastItem = itens[itens.length - 1];
-    containerItens.insertBefore( lastItem, itens[0]);
+    containerItens.insertBefore(lastItem, itens[0]);
     itens = document.querySelectorAll('.item')
 }
 
