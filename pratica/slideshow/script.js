@@ -1,7 +1,7 @@
 let containerItens = document.querySelector('#container-itens');
 let itens = document.querySelectorAll('.item');
 
-const anterior = () => {
+const anterior = () => {  
     containerItens.appendChild(itens[0]);
     itens = document.querySelectorAll('.item')
 }
