@@ -60,7 +60,7 @@ main{
 #anterior,
 #proximo {
     cursor: pointer;
-    padding: 1rem 1rem 0 1rem;
+    padding: 0 1rem;
 }
 
 .card-cima h3{
@@ -121,17 +121,22 @@ main{
 }
 
 #tenis-1,
-#tenis-2{
-    width: 400px;
+#tenis-2,
+#tenis-3{
+    width: 500px;
     position: absolute;
     transition: 1s;
-    top: 209px;
+    top: 42px;
 }
 
 #tenis-1{
-    left: -50px;
+    left: -93px;
 }
 
 #tenis-2{ 
+    left: -650px;
+}
+
+#tenis-3 {
     left: -650px;
 }

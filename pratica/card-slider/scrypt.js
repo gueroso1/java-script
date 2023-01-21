@@ -5,10 +5,10 @@ const proximo = document.querySelector('#proximo')
 
 anterior.addEventListener('click', () => {
     tenis1.style.left = '650px'
-    tenis2.style.left = '-50px'
+    tenis2.style.left = '-93px'
 })
 
 proximo.addEventListener('click', () => {
-    tenis1.style.left = '-50px'
+    tenis1.style.left = '-93px'
     tenis2.style.left = '-650px'
 })
