@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- script principal -->
+    <script defer src="script.js"></script>
+
+    <title>Pokemon</title>
+</head>
+
+<body>
+    <main>
+        <h1>Trabalhando com <span>HTML,CSS</span> e usando o <span>Javascript</span> para fazer consultas online.</h1>
+
+        <hr>
+
+        <div class="imagem"><img src="img/pokemon-logo.png" alt="pokemon logo"></div>
+
+        <form autocomplete="off" id="form">
+            <div class="grupo-form">
+                <label>Nome ou Número do Pokémon:</label>
+                <input type="text" id="inputSearch" placeholder="Exemplo: Pikachu ou 25" required>
+            </div>
+
+            <div class="grupo-form">
+                <input type="submit" value="Pesquisar" id="pesquisar">
+            </div>
+        </form>
+
+        <div id="imgPokemon">
+            <img id="frente">
+            <img id="costas">
+        </div>
+
+        <div id="infoPokemon">
+            <p id="nomePokemon"></p>
+            <p id="tipagem"></p>
+        </div>
+    </main>
+</body>
+
+</html>
