@@ -1,4 +1,6 @@
-const grid = document.querySelector('.grid')
+const grid = document.querySelector('.grid');
+const player = document.querySelector('.player');
+const timer = document.querySelector('.timer');
 
 // lista com nome das cartas
 const personagens = [
@@ -12,7 +14,7 @@ const personagens = [
     'summer',
     'meeseeks',
     'scroopy',
-]
+];
 
 
 // função que cria tag e classes para as tags criadas
@@ -35,16 +37,21 @@ let segundaCarta = '';
 
 // função que checa se venceu o jogo
 const checarSeVenceu = () => {
-   
+
     // armazena todos elementos que tem a classe '.desabilitar-carta'
     const cartasDesabilitadas = document.querySelectorAll('.desabilitar-carta');
 
     // se tiver 20 cartas desabilitadas é porque o jogo acabou
-    if (cartasDesabilitadas.length ==  20) {
+    if (cartasDesabilitadas.length == 20) {
         setTimeout(() => {
-            alert('Parabéns você ganhou!');
+            
+            // limpa o timer
+            clearInterval(this.loop);
+
+            // mensagem de vitoria
+            alert(`Parabéns, ${player.innerHTML}! Seu tempo foi ${timer.innerHTML} de segundos.`);
         }, 800);
-        
+
     }
 }
 
@@ -162,4 +169,29 @@ const carregarJogo = () => {
     });
 }
 
-carregarJogo();
+
+const iniciarTimer = () => {
+
+    // armazena o temporizador na variavel
+    this.loop = setInterval(() => {
+
+        const tempoAtual = +timer.innerHTML;
+
+        timer.innerHTML = tempoAtual + 1
+
+    }, 1000)
+}
+
+
+// quando a janela carregar
+window.onload = () => {
+
+    // carrega na tela o nome do jogador
+    player.innerHTML = localStorage.getItem('Jogador');
+
+    // inicia o timer
+    iniciarTimer();
+
+    // carrega o jogo
+    carregarJogo();
+}
