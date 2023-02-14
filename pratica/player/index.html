@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0,user-scalable=0">
+
+    <!-- links -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <!-- script principal -->
+    <script defer src="script.js"></script>
+
+    <title>Projeto Player</title>
+</head>
+
+<body>
+    <main>
+        <img src="img/favelavive.png" alt="capa da musica" id="imagem">
+
+        <div class="descricao">
+            <h2 id="nomeMusica">Nome da Música</h2>
+
+            <i id="nomeArtista">Junão da Massa</i>
+        </div>
+
+        <div class="duracao">
+            <div class="barra">
+                <progress value="0" max="1" id="barrinha"></progress>
+
+                <div class="ponto"></div>
+            </div>
+
+            <div class="tempo">
+                <p class="inicio">0:00</p>
+
+                <p class="fim">3:33</p>
+            </div>
+        </div>
+
+        <div class="player">
+            <i class="fas fa-step-backward setas" id="anterior"></i>
+            <i class="fas fa-play-circle botao-play"></i>
+            <i class="fas fa-pause-circle botao-pause" id="cu"></i>
+            <i class="fas fa-step-forward setas" id="proxima"></i>
+        </div>
+
+        <audio src="music/favela-vive.mp3" id="musica"></audio>
+    </main>
+</body>
+
+</html>
