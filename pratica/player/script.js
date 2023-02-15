@@ -11,7 +11,13 @@ const musicas = [
 
     { titulo: 'Void Whispers', artista: 'Ovg', src: 'music/void-whispers.mp3', img: 'img/void-whispers.jpg' },
 
-    { titulo: 'Hollow Shikai', artista: 'Ovg', src: 'music/hollow-shikai.mp3', img: 'img/hollow-knight.jpg' }
+    { titulo: 'Hollow Shikai', artista: 'Ovg', src: 'music/hollow-shikai.mp3', img: 'img/hollow-knight.jpg' },
+
+    { titulo: 'Evoque Prata', artista: 'MC Menor HR e MC Menor SG', src: 'music/evoque-prata.mp3', img: 'img/evoque.jpg' },
+
+    { titulo: 'Estou Nervosa', artista: 'Lara Suleiman (De "Encanto")', src: 'music/estou-nervosa.mp3', img: 'img/encanto.png' },
+
+    { titulo: 'Não Falamos do Bruno', artista: 'De "Encanto"', src: 'music/nao-falamos-do-bruno.mp3', img: 'img/encanto.png' }
 ];
 
 
@@ -92,7 +98,7 @@ const renderizarMusica = (i) => {
     });
 }
 
-
+renderizarMusica(indexMusica);
 
 // eventos
 
@@ -104,10 +110,26 @@ musica.addEventListener('timeupdate', atualizarBarra);
 
 document.querySelector('#anterior').addEventListener('click', () => {
     indexMusica--;
+    
+    if(indexMusica < 0) {
+        indexMusica = 9;
+    }
+
+    pauseMusica.style.display = 'none';
+    playMusica.style.display = 'block';
+
     renderizarMusica(indexMusica);
 })
 
 document.querySelector('#proxima').addEventListener('click', () => {
     indexMusica++;
+
+    if(indexMusica > 9) {
+        indexMusica = 0;
+    }
+
+    pauseMusica.style.display = 'none';
+    playMusica.style.display = 'block';
+    
     renderizarMusica(indexMusica);
 })
