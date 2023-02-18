@@ -13,24 +13,12 @@ body {
     background-color: #333;
 }
 
-#cu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-}
-
-#logo {
-    height: 80%;
-    display: block;
-}
-
 .piano {
     background-color: #121212;
     width: 98vw;
     max-width: 1000px;
     height: 400px;
-    margin: 0 auto 0;
+    margin: 100px auto 0;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
