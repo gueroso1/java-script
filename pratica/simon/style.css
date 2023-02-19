@@ -70,6 +70,7 @@ body {
 #start,
 #mute {
 	margin-top: 20px;
+	margin: 5px;
 	background-color: gray;
 	color: white;
 	width: 100px;
