@@ -11,7 +11,7 @@ const somGameOver = new Audio('sounds/sounds_end.mp3');
 const redSom = new Audio('sounds/sounds_red.mp3');
 const greenSom = new Audio('sounds/sounds_green.mp3');
 const blueSom = new Audio('sounds/sounds_blue.mp3');
-const yellowSom = new Audio('sounds/sounds_red.mp3');
+const yellowSom = new Audio('sounds/sounds_yellow.mp3');
 
 let proximoIndice = 0;
 scoreAtual = 0;
