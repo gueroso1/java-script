@@ -117,11 +117,11 @@ const piscarCor = () => {
 
         }, 800 * index)
 
-        cores.forEach(cor => {
+    });
 
-            document.querySelector(`#${cor}`).addEventListener('click', checarResposta);
+    cores.forEach(cor => {
 
-        });
+        document.querySelector(`#${cor}`).addEventListener('click', checarResposta);
 
     });
 
